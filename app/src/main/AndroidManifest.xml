@@ -12,20 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmNavi">
         <activity
-            android:name=".PestDiseaseAnalysisActivity"
+            android:name=".PestDiseaseAnalysisFragment"
             android:exported="false" />
         <activity
-            android:name=".UserProfileActivity"
+            android:name=".UserProfileFragment"
             android:exported="false" />
         <activity
-            android:name=".MarketPricesActivity"
+            android:name=".MarketFragment"
             android:exported="false" />
         <activity
-            android:name=".SelectCropActivity"
+            android:name=".AdvisoryFragment"
             android:exported="true" />
-        <activity
-            android:name=".Home_Screen"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".Home_Screen"-->
+<!--            android:exported="true">-->
+
+<!--        </activity>-->
         <activity
             android:name=".Splash_Screen"
             android:exported="true">

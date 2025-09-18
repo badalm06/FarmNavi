@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:id="@+id/main"
     android:layout_height="match_parent"
     android:background="#F9FAFC">
@@ -197,7 +198,7 @@
                         android:background="@android:color/transparent">
 
                         <ImageView
-                            android:src="@drawable/agriculture"
+                            android:src="@drawable/baseline_email_24"
                             android:tint="@color/black"
                             android:layout_width="28dp"
                             android:layout_height="28dp"/>
@@ -211,14 +212,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Crops Grown"
+                                android:text="Email"
                                 android:textColor="#949B97"
                                 android:textSize="13sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lettuce, Strawberries, Grapes"
+                                android:text="xyz@gmail.com"
                                 android:textColor="#1B2742"
                                 android:textSize="16sp"
                                 android:textStyle="bold"/>
@@ -247,7 +248,7 @@
                         android:background="@android:color/transparent">
 
                         <ImageView
-                            android:src="@drawable/grain"
+                            android:src="@drawable/baseline_local_phone_24"
                             android:tint="@color/black"
                             android:layout_width="28dp"
                             android:layout_height="28dp"/>
@@ -261,14 +262,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Soil Type"
+                                android:text="Phone Number"
                                 android:textColor="#949B97"
                                 android:textSize="13sp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Loamy Sand"
+                                android:text="+9999999999"
                                 android:textColor="#1B2742"
                                 android:textSize="16sp"
                                 android:textStyle="bold"/>
@@ -301,18 +302,4 @@
         android:backgroundTint="#D32F2F"
         app:cornerRadius="14dp"/>
 
-    <!-- Bottom Navigation -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemIconTint="@color/selector_nav"
-        app:itemTextColor="@color/selector_nav"
-        android:elevation="8dp"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 </LinearLayout>

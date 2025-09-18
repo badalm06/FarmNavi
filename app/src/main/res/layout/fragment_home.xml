@@ -55,39 +55,39 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
 
         <LinearLayout
             android:id="@+id/dash_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="16dp"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
 
             <!-- Section Title -->
             <TextView
                 android:id="@+id/tv_daily_insights"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
                 android:text="Daily Insights"
-                android:textStyle="bold"
-                android:textSize="22sp"
                 android:textColor="#222C32"
-                android:paddingBottom="6dp"/>
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <!-- Insights Card -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_insight"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="18dp"
                 app:cardCornerRadius="20dp"
-                android:layout_marginTop="10dp"
                 app:cardElevation="6dp">
 
                 <RelativeLayout
@@ -99,35 +99,35 @@
                         android:id="@+id/img_insight"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:contentDescription="Field Image"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/frost_field"
-                        android:contentDescription="Field Image" />
+                        android:src="@drawable/frost_field" />
 
                     <!-- Insight Main Text -->
                     <TextView
                         android:id="@+id/tv_insight_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="18dp"
+                        android:paddingTop="58dp"
+                        android:paddingRight="18dp"
                         android:text="Protect your crops from the upcoming frost"
                         android:textColor="#FFFDFD"
                         android:textSize="28sp"
-                        android:textStyle="bold"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:paddingTop="58dp"
-                        android:fontFamily="sans-serif-medium"/>
+                        android:textStyle="bold" />
 
                     <!-- Insight Sub Text -->
                     <TextView
                         android:id="@+id/tv_insight_subtitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingLeft="18dp"
+                        android:paddingTop="132dp"
+                        android:paddingRight="18dp"
                         android:text="Prepare your fields for the expected temperature drop tonight."
                         android:textColor="#FFFFFF"
-                        android:textSize="16sp"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:paddingTop="132dp"/>
+                        android:textSize="16sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -136,30 +136,30 @@
                 android:id="@+id/tv_quick_access"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quick Access"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#222C32"
                 android:paddingTop="6dp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:text="Quick Access"
+                android:textColor="#222C32"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <!-- Quick Access Grid -->
             <GridLayout
                 android:id="@+id/grid_quick_access"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:rowCount="2"
-                android:columnCount="2"
                 android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:rowCount="2"
                 android:useDefaultMargins="true">
 
                 <!-- Weather -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="120dp"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp"
                     app:strokeWidth="0dp">
@@ -168,9 +168,9 @@
                         android:id="@+id/item_weather"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:background="@android:color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="10dp">
 
                         <ImageView
@@ -178,9 +178,9 @@
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:background="@drawable/blue_circle"
-                            android:src="@drawable/weather"
                             android:contentDescription="Weather Icon"
                             android:padding="12dp"
+                            android:src="@drawable/weather"
                             app:tint="#FFFFFF" />
 
 
@@ -188,11 +188,11 @@
                             android:id="@+id/text_weather"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
                             android:text="Weather"
-                            android:textSize="16sp"
                             android:textColor="#222C32"
-                            android:textStyle="bold"
-                            android:paddingTop="4dp"/>
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -201,9 +201,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="120dp"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp"
                     app:strokeWidth="0dp">
@@ -212,9 +212,9 @@
                         android:id="@+id/item_crop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:background="@android:color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="10dp">
 
                         <ImageView
@@ -222,20 +222,20 @@
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:background="@drawable/green_circle"
-                            android:src="@drawable/agriculture"
-                            android:padding="12dp"
                             android:contentDescription="Crop Advisory"
+                            android:padding="12dp"
+                            android:src="@drawable/agriculture"
                             app:tint="#FFFFFF" />
 
                         <TextView
                             android:id="@+id/text_crop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
                             android:text="Crop Advisory"
-                            android:textSize="16sp"
                             android:textColor="#222C32"
-                            android:textStyle="bold"
-                            android:paddingTop="4dp"/>
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -244,9 +244,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="120dp"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp"
                     app:strokeWidth="0dp">
@@ -255,9 +255,9 @@
                         android:id="@+id/item_pest"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:background="@android:color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="10dp">
 
                         <ImageView
@@ -265,20 +265,20 @@
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:background="@drawable/red_circle"
-                            android:src="@drawable/pest"
-                            android:padding="12dp"
                             android:contentDescription="Pest and Disease"
+                            android:padding="12dp"
+                            android:src="@drawable/pest"
                             app:tint="#FFFFFF" />
 
                         <TextView
                             android:id="@+id/text_pest"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
                             android:text="Pest &amp; Disease"
-                            android:textSize="16sp"
                             android:textColor="#222C32"
-                            android:textStyle="bold"
-                            android:paddingTop="4dp"/>
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -287,9 +287,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="120dp"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp"
                     app:strokeWidth="0dp">
@@ -298,9 +298,9 @@
                         android:id="@+id/item_market"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:background="@android:color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="10dp">
 
                         <ImageView
@@ -308,20 +308,20 @@
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:background="@drawable/yellow_circle"
-                            android:src="@drawable/bar"
-                            android:padding="12dp"
                             android:contentDescription="Market Price"
+                            android:padding="12dp"
+                            android:src="@drawable/bar"
                             app:tint="#FFFFFF" />
 
                         <TextView
                             android:id="@+id/text_market"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
                             android:text="Market Price"
-                            android:textSize="16sp"
                             android:textColor="#222C32"
-                            android:textStyle="bold"
-                            android:paddingTop="4dp"/>
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -329,20 +329,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation Bar -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemIconTint="@color/selector_nav"
-        app:itemTextColor="@color/selector_nav"
-        android:elevation="8dp"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmNavi">
         <activity
+            android:name=".Login_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".PestDiseaseAnalysisFragment"
             android:exported="false" />
         <activity
@@ -20,14 +31,15 @@
         <activity
             android:name=".MarketFragment"
             android:exported="false" />
+        <!--
+            Note: Since AdvisoryFragment is a Fragment and not a standalone Activity,
+            this activity tag is likely incorrect. It should be removed if it's
+            hosted by MainActivity.
+        -->
         <activity
             android:name=".AdvisoryFragment"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".Home_Screen"-->
-<!--            android:exported="true">-->
-
-<!--        </activity>-->
         <activity
             android:name=".Splash_Screen"
             android:exported="true">
@@ -42,7 +54,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

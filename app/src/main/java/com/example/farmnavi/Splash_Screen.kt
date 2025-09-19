@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 
 class Splash_Screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +20,18 @@ class Splash_Screen : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val auth = FirebaseAuth.getInstance()
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, OnBoarding_Screen::class.java)
-            startActivity(intent)
+            if (auth.currentUser != null) {
+                // User is logged in, go to MainActivity
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                // No user logged in, show onboarding
+                val intent = Intent(this, OnBoarding_Screen::class.java)
+                startActivity(intent)
+            }
             finish()
         }, 2000)
     }

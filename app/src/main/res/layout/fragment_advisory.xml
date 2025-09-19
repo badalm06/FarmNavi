@@ -1,127 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:id="@+id/main"
-    android:background="#FFFFFF"
-    tools:context=".AdvisoryFragment">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <!-- Top App Bar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:background="?attr/colorSurface"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:navigationIcon="?attr/homeAsUpIndicator">
-
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginTop="32dp"
+        app:navigationIcon="@drawable/ic_arrow_back">
         <TextView
-            android:id="@+id/toolbar_title_center"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="left"
             android:text="Crop Advisory"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#222222"
-            android:layout_gravity="center" />
+            android:paddingVertical="14dp"/>
     </com.google.android.material.appbar.MaterialToolbar>
 
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="66dp"
+    android:fillViewport="true"
+    android:paddingBottom="80dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
 
-
-    <!-- Content area -->
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/topAppBar"
-        app:layout_constraintBottom_toTopOf="@id/button_recommendations"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:id="@+id/contentLayout"
-            android:orientation="vertical"
+        <!-- Result Heading -->
+        <TextView
+            android:id="@+id/text_result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="Recommended Crop:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:padding="16dp"
+            android:gravity="center" />
 
-            <!-- Crop Name Dropdown -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_crop_name"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        <!-- Nitrogen input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:hint="Nitrogen">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_nitrogen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Crop Name"
-                android:layout_marginBottom="16dp">
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/dropdown_crop_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:focusable="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
+        <!-- Phosphorus input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Phosphorus">
 
-            <!-- Growth Stage Dropdown -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_growth_stage"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_phosphorus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Growth Stage"
-                android:layout_marginBottom="16dp">
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/dropdown_growth_stage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:focusable="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
+        <!-- Potassium input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Potassium">
 
-            <!-- Season Dropdown -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_season"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_potassium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Season"
-                android:layout_marginBottom="16dp">
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/dropdown_season"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:focusable="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-    </ScrollView>
+        <!-- Temperature input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Temperature (°C)">
 
-    <!-- Get Recommendations Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_recommendations"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_margin="16dp"
-        android:backgroundTint="#D32F2F"
-        android:text="Get Recommendations"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:cornerRadius="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Humidity input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Humidity (%)">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Soil pH input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Soil pH">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_ph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Rainfall input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Rainfall (mm)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_rainfall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+    <!-- Fixed Button -->
+<com.google.android.material.button.MaterialButton
+android:id="@+id/button_recommendations"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:layout_gravity="bottom"
+android:layout_margin="16dp"
+android:text="Get Recommendations"
+android:textColor="@android:color/white"
+android:backgroundTint="#D32F2F"
+app:cornerRadius="12dp" />
+
+    </FrameLayout>

@@ -19,7 +19,7 @@ class OnBoarding_Screen : AppCompatActivity() {
             insets
         }
         findViewById<Button>(R.id.button_get_started).setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, SignUp_Activity::class.java))
             finish()
         }
     }

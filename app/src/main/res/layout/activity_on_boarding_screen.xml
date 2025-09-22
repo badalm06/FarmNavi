@@ -33,20 +33,21 @@
                 android:contentDescription="Farmer illustration" />
 
             <!-- Welcome Title -->
+
+            <!-- Welcome Subtitle -->
             <TextView
                 android:id="@+id/text_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome to AgriAssist"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="28sp"
-                android:textColor="#222C32"
+                android:fontFamily="sans-serif"
                 android:paddingTop="20dp"
                 android:paddingBottom="6dp"
-                android:fontFamily="sans-serif" />
+                android:text="Welcome to FarmNavi"
+                android:textAlignment="center"
+                android:textColor="#222C32"
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
-            <!-- Welcome Subtitle -->
             <TextView
                 android:id="@+id/text_subtitle"
                 android:layout_width="match_parent"

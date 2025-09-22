@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:id="@+id/main"
     android:padding="24dp"
-    android:background="#F7F9FA">
+    android:background="@color/lightGreen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,6 +53,8 @@
         android:hint="Full Name"
         android:drawableStart="@drawable/baseline_person_24"
         android:drawablePadding="12dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
         android:background="@drawable/rounded_edittext"
         android:paddingStart="16dp"
         android:inputType="textPersonName"
@@ -67,6 +69,8 @@
         android:drawableStart="@drawable/baseline_email_24"
         android:drawablePadding="12dp"
         android:background="@drawable/rounded_edittext"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
         android:paddingStart="16dp"
         android:inputType="textEmailAddress"
         android:layout_marginTop="12dp"
@@ -80,6 +84,8 @@
         android:drawableStart="@drawable/baseline_call_24"
         android:drawablePadding="12dp"
         android:background="@drawable/rounded_edittext"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
         android:paddingStart="16dp"
         android:inputType="phone"
         android:layout_marginTop="12dp"
@@ -93,6 +99,8 @@
         android:drawableStart="@drawable/baseline_location_on_24"
         android:drawablePadding="12dp"
         android:background="@drawable/rounded_edittext"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
         android:paddingStart="16dp"
         android:inputType="text"
         android:layout_marginTop="12dp"
@@ -105,20 +113,21 @@
         android:hint="Password"
         android:drawableStart="@drawable/baseline_lock_24"
         android:drawablePadding="12dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
         android:background="@drawable/rounded_edittext"
         android:paddingStart="16dp"
         android:inputType="textPassword"
         android:layout_marginTop="12dp"
         android:textSize="16sp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUpButton"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:text="Sign Up"
         android:textSize="18sp"
         android:textColor="#FFF"
-        android:backgroundTint="#2575FC"
         android:layout_marginTop="24dp"
         android:background="@drawable/rounded_button" />
 

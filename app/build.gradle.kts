@@ -8,6 +8,10 @@ android {
     namespace = "com.example.farmnavi"
     compileSdk = 36
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     aaptOptions {
         noCompress ("tflite")
     }
@@ -65,10 +69,14 @@ dependencies {
         exclude(group = "com.google.ai.edge.litert", module = "litert-api")
     }
 
+    // Lottie Animation
+    implementation ("com.airbnb.android:lottie:6.6.3")
+
     // Retrofit for network requests
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.google.material)
+    implementation(libs.androidx.activity)
 
     // Testing libraries
     testImplementation("junit:junit:4.13.2")
@@ -76,42 +84,3 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
 
-
-//dependencies {
-//
-//    implementation(libs.androidx.core.ktx)
-//    implementation(libs.androidx.appcompat)
-//    implementation(libs.material)
-//    implementation(libs.androidx.activity)
-//    implementation(libs.androidx.constraintlayout)
-//    implementation(libs.firebase.auth)
-//    implementation(libs.androidx.credentials)
-//    implementation(libs.androidx.credentials.play.services.auth)
-//    implementation(libs.googleid)
-//    testImplementation(libs.junit)
-//    androidTestImplementation(libs.androidx.junit)
-//    androidTestImplementation(libs.androidx.espresso.core)
-//    implementation("com.google.firebase:firebase-auth:24.0.1")
-//    implementation("androidx.credentials:credentials:1.5.0")
-//    implementation("androidx.credentials:credentials-play-services-auth:1.5.0")
-//    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
-//    implementation("com.google.android.material:material:1.9.0")
-//    implementation("com.google.firebase:firebase-firestore-ktx:24.5.0")
-//
-//
-//    implementation("androidx.core:core-ktx:1.12.0")
-//    implementation("com.google.android.material:material:1.9.0")
-//    implementation("androidx.appcompat:appcompat:1.7.0")
-//
-//    implementation("org.tensorflow:tensorflow-lite:2.17.0")
-//    implementation("org.tensorflow:tensorflow-lite-gpu:2.17.0")
-//
-//    // Kept only the version with the exclude rules
-//    implementation("org.tensorflow:tensorflow-lite-support:0.4.0") {
-//        exclude(group = "org.tensorflow", module = "tensorflow-lite-api")
-//        exclude(group = "com.google.ai.edge.litert", module = "litert-api")
-//    }
-//
-//    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-//    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-//}

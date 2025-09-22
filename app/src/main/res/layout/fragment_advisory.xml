@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="@color/lightGreen">
 
     <!-- Top App Bar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@color/lightGreen"
         android:layout_marginTop="32dp"
         app:navigationIcon="@drawable/ic_arrow_back">
         <TextView
@@ -63,6 +63,8 @@
                 android:id="@+id/input_nitrogen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,6 +80,8 @@
                 android:id="@+id/input_phosphorus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,6 +96,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_potassium"
                 android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -107,6 +113,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_temperature"
                 android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -122,6 +130,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_humidity"
                 android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -137,6 +147,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_ph"
                 android:layout_width="match_parent"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -153,6 +165,8 @@
                 android:id="@+id/input_rainfall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 

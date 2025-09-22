@@ -6,14 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/main"
-    android:background="#F7F8FA">
+    android:background="@color/lightGreen">
 
     <!-- App Bar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F7F8FA"
+        android:layout_marginTop="32dp"
+        android:background="@color/lightGreen"
         app:navigationIcon="?attr/homeAsUpIndicator" >
         <TextView
             android:layout_width="match_parent"
@@ -63,6 +64,30 @@
                 android:layout_marginBottom="18dp"
                 android:layout_marginLeft="26dp"
                 android:layout_marginRight="26dp"/>
+
+            <!-- Image View for Display -->
+            <ImageView
+                android:id="@+id/capturedImageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/baseline_upload_24"
+                android:scaleType="centerCrop"
+                android:background="#F1F1F1"
+                android:padding="8dp"
+                android:layout_marginBottom="18dp"
+                android:contentDescription="Captured or uploaded image" />
+
+            <!-- Diagnosis Result Text -->
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result will be shown here..."
+                android:textColor="#D32F2F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
 
             <!-- Drag & Drop / Upload Box -->
             <LinearLayout
@@ -131,5 +156,4 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

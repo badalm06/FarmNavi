@@ -27,5 +27,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         view.findViewById<LinearLayout>(R.id.item_pest)?.setOnClickListener {
             (activity as? MainActivity)?.showFragment(PestDiseaseAnalysisFragment())
         }
+
+        view.findViewById<LinearLayout>(R.id.item_weather)?.setOnClickListener {
+            (activity as? MainActivity)?.showFragment(WeatherFragment())
+        }
+
     }
 }

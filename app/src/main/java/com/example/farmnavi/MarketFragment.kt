@@ -15,6 +15,7 @@ import org.json.JSONObject
 import android.util.Log
 import com.google.android.material.appbar.MaterialToolbar
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 class MarketFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
@@ -101,11 +102,14 @@ class MarketFragment : Fragment() {
 
     private fun fetchMarketPrices() {
         progressBar.visibility = View.VISIBLE
-        val apiUrl = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?api-key=579b464db66ec23bdd000001a10501c810784eef423bb9082cb97663&format=json&limit=5000&sort[Arrival_Date]=desc"
+        val apiUrl = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?api-key=579b464db66ec23bdd000001a10501c810784eef423bb9082cb97663&format=json&limit=500&sort[Arrival_Date]=desc"
 
         Thread {
             try {
-                val client = OkHttpClient()
+                val client = OkHttpClient.Builder()
+                    .readTimeout(30, TimeUnit.SECONDS) // Set read timeout to 30 seconds
+                    .connectTimeout(30, TimeUnit.SECONDS) // Also a good idea to set connect timeout
+                    .build()
                 val request = Request.Builder().url(apiUrl).build()
                 val response = client.newCall(request).execute()
                 val jsonString = response.body()?.string() ?: ""

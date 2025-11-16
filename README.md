@@ -2,6 +2,7 @@
 
 FarmNavi is a multilingual, AI-powered agriculture advisory app designed to help Indian farmers receive instant crop, soil, weather, pest, and market insights in simple language. With voice assistant support, image-based pest detection, and real-time advisories, FarmNavi empowers farmers with scientific decision-making directly on their smartphones.
 
+---
 
 📸 Screenshots
 
@@ -13,6 +14,7 @@ FarmNavi is a multilingual, AI-powered agriculture advisory app designed to help
 <img width="200" height="707" alt="Screenshot_20251117_011122" src="https://github.com/user-attachments/assets/ac7ba3d7-c6f4-4fb4-a2fb-8de287a6a220" />
 
 
+---
 
 ## ✨ Features
 
@@ -37,6 +39,8 @@ Ask questions and get advisory through natural speech.
 - ⭐ **Feedback & Support:**
 Improve model accuracy through user feedback.
 
+---
+
 ## 🧱 Built With
 
 - 💎 **Kotlin / Android** – Modern app development
@@ -53,6 +57,7 @@ Improve model accuracy through user feedback.
 
 - 🎨 **Material Design Components** – Simple, farmer-friendly UI
 
+---
 
 ## 🚀 Getting Started
 ### 🧰 Prerequisites
@@ -65,12 +70,14 @@ Improve model accuracy through user feedback.
 
 - Backend (FastAPI/Node.js) running for ML + advisory APIs
 
+---
+
 ### 📦 Installation
 
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/badalm06/fund-trackr.git
+    git clone https://github.com/badalm06/FarmNavi.git
     ```
 
 2. **Open in Android Studio**
@@ -79,7 +86,7 @@ Improve model accuracy through user feedback.
 
 4. **Run the app** – Use an emulator or physical Android device.
 
-
+---
 
 ## 💡 Planned Features
 
@@ -93,6 +100,7 @@ Improve model accuracy through user feedback.
 
 - 📈 Export Advisory Data as PDF
 
+---
 
 ## 💬 Contact & Support
 
@@ -101,6 +109,7 @@ Feel free to reach out for suggestions, bugs, or contributions:
 📧 Email: [badalsh908@gmail.com](mailto:badalsh908@gmail.com)  
 🐙 GitHub: [github.com/badalm06](https://github.com/badalm06)
 
+---
 
 ## 🪪 License
 

@@ -1,6 +1,6 @@
 # 🌾 FarmNavi – Smart Crop Advisory App (SIH 2025)
 
-FarmNavi is a multilingual, AI-powered agriculture advisory app designed to help Indian farmers receive instant crop, soil, weather, pest, and market insights in simple language. With voice assistant support, image-based pest detection, and real-time advisories, FarmNavi empowers farmers with scientific decision-making directly on their smartphones.
+FarmNavi is a AI-powered agriculture advisory app designed to help Indian farmers receive instant crop, soil, weather, pest, and market insights in simple language. With voice assistant support, image-based pest detection, and real-time advisories, FarmNavi empowers farmers with scientific decision-making directly on their smartphones.
 
 ---
 

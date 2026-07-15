@@ -6,12 +6,12 @@ FarmNavi is a AI-powered agriculture advisory app designed to help Indian farmer
 
 📸 Screenshots
 
-<img width="200" height="707" alt="Screenshot_20251117_010423" src="https://github.com/user-attachments/assets/7e94b538-1fae-4d47-9165-32325f25f499" /> &nbsp;&nbsp;&nbsp;
-<img width="200" height="707" alt="Screenshot_20251117_010543" src="https://github.com/user-attachments/assets/6a71b585-c9b5-4840-9a7f-d89414efcd95" /> &nbsp;&nbsp;&nbsp;
-<img width="200" height="707" alt="Screenshot_20251117_010600" src="https://github.com/user-attachments/assets/46bd97e3-f17a-4998-bf76-c331ebf1b3bc" /> &nbsp;&nbsp;&nbsp;
-<img width="200" height="707" alt="Screenshot_20251117_010921" src="https://github.com/user-attachments/assets/3e06617b-67dc-4164-a1d7-50f99878ba13" /> &nbsp;&nbsp;&nbsp;
-<img width="200" height="707" alt="Screenshot_20251117_011102" src="https://github.com/user-attachments/assets/d7aa0e00-4454-4cbb-97b8-51479c6a6c54" /> &nbsp;&nbsp;&nbsp;
-<img width="200" height="707" alt="Screenshot_20251117_011122" src="https://github.com/user-attachments/assets/ac7ba3d7-c6f4-4fb4-a2fb-8de287a6a220" />
+<img width="200" height="400" alt="Screenshot_20251117_010423" src="https://github.com/user-attachments/assets/7e94b538-1fae-4d47-9165-32325f25f499" /> &nbsp;&nbsp;&nbsp;
+<img width="200" height="400" alt="Screenshot_20251117_010543" src="https://github.com/user-attachments/assets/6a71b585-c9b5-4840-9a7f-d89414efcd95" /> &nbsp;&nbsp;&nbsp;
+<img width="200" height="400" alt="Screenshot_20251117_010600" src="https://github.com/user-attachments/assets/46bd97e3-f17a-4998-bf76-c331ebf1b3bc" /> &nbsp;&nbsp;&nbsp;
+<img width="200" height="400" alt="Screenshot_20251117_010921" src="https://github.com/user-attachments/assets/3e06617b-67dc-4164-a1d7-50f99878ba13" /> &nbsp;&nbsp;&nbsp;
+<img width="200" height="400" alt="Screenshot_20251117_011102" src="https://github.com/user-attachments/assets/d7aa0e00-4454-4cbb-97b8-51479c6a6c54" /> &nbsp;&nbsp;&nbsp;
+<img width="200" height="400" alt="Screenshot_20251117_011122" src="https://github.com/user-attachments/assets/ac7ba3d7-c6f4-4fb4-a2fb-8de287a6a220" />
 
 
 ---
